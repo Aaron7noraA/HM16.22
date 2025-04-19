@@ -51,6 +51,8 @@ if __name__ == '__main__':
 
                     V = source.read(size)
                     V = np.frombuffer(V, dtype=np.uint8).copy().reshape(1, shape[0], shape[1])[:, ::2, ::2].tobytes()
+                    print(V.size)
+                    exit()
 
                     dest.write(Y)
                     dest.write(U)
